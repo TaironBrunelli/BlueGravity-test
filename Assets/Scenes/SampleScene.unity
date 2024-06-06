@@ -123,8 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< Updated upstream
-=======
+
 --- !u!1 &293039531
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +142,9 @@ GameObject:
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
+  m_Layer: 0
+  m_Name: Character
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,6 +278,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_Animator: {fileID: 0}
   _shop: {fileID: 0}
+  player_Animation: {fileID: 0}
+  idle_Animation: {fileID: 7400000, guid: 6b7e58cd19992fa48b2df3b4bb44787d, type: 2}
+  walkUp_Animation: {fileID: 7400000, guid: 03082c9c1b6f2c5448cd569f54d7261e, type: 2}
+  walkLeft_Animation: {fileID: 7400000, guid: c2716b504c9ea8a40b760f4cdc04f5f1, type: 2}
+  walkDown_Animation: {fileID: 7400000, guid: e88f3e1d771105544b57a32d398b54be, type: 2}
+  walkRight_Animation: {fileID: 7400000, guid: 8c4468b6ba69a3a4bb8052df7e81204e, type: 2}
 --- !u!111 &293039538
 Animation:
   m_ObjectHideFlags: 0
@@ -662,7 +670,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490858862}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,8 +762,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
+
+
 --- !u!1 &570840155
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +776,8 @@ GameObject:
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
+=======
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -973,7 +982,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &1810316465
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,9 +4427,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1810316467}
-<<<<<<< Updated upstream
 =======
   - {fileID: 570840156}
   - {fileID: 351378629}
   - {fileID: 1750166873}
->>>>>>> Stashed changes
+  - {fileID: 570840156}

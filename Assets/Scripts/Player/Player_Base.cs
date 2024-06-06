@@ -8,6 +8,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player_Base : MonoBehaviour
@@ -30,12 +34,14 @@ public class Player_Base : MonoBehaviour
     //-- Infos
     public Shop _shop;
 
+
     private void Awake()
     {
         input = new Player_Input();
         rb = GetComponent<Rigidbody2D>();
         player_Animator = GetComponent<Animator>();
         _shop = null;
+
     }
 
     private void OnEnable()
@@ -44,6 +50,7 @@ public class Player_Base : MonoBehaviour
         input.Player.Movement.performed += OnMovementPerformed;
         input.Player.Movement.canceled += OnMovementCancelled;
         input.Player.Interaction.performed += OnInteractionPerformed;
+
     }
 
     private void OnDisable()
@@ -59,6 +66,9 @@ public class Player_Base : MonoBehaviour
         player_Animator.SetFloat("Vertical", moveVector.y); //-- Animator value -> Change Animation based on moveVector value;
         player_Animator.SetFloat("Horizontal", moveVector.x); //-- Animator value -> Change Animation based on moveVector value;
 
+        player_Animator.SetFloat("Vertical", moveVector.y);
+        player_Animator.SetFloat("Horizontal", moveVector.x);
+
         rb.velocity = moveVector * moveSpeed;
     }
     private void OnMovementPerformed(InputAction.CallbackContext value)
@@ -70,7 +80,7 @@ public class Player_Base : MonoBehaviour
     {
         moveVector = Vector2.zero;
     }
-
+    
     void OnTriggerEnter2D(Collider2D coll) // -- old version -> OnTriggerStay2D
     {
         if (coll.gameObject.CompareTag("Shopkeeper"))
